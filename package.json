@@ -14,8 +14,8 @@
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
-    "lint": "tsdx lint  --max-warnings=0",
-    "prepare": "tsdx build",
+    "lint": "tsdx lint --max-warnings=0",
+    "prepare": "husky install",
     "size": "size-limit",
     "analyze": "size-limit --why"
   },
@@ -48,6 +48,7 @@
     "@typescript-eslint/parser": "^5.46.1",
     "eslint": "^8.29.0",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-config-react-app": "^7.0.1",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-react-hooks": "^4.6.0",
