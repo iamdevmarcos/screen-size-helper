@@ -4,11 +4,14 @@ import * as ReactDOM from 'react-dom';
 import { useScreenSize } from '../src'
 
 const App = () => {
-  const { currentWidth } = useScreenSize()
+  const { currentWidth, isMobile } = useScreenSize()
 
   return (
     <div>
       <h1>Current Width is: {currentWidth}</h1>
+      {isMobile && (
+        <p>Only Mobile</p>
+      )}
     </div>
   );
 };

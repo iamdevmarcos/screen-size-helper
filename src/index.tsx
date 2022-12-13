@@ -19,5 +19,16 @@ export const useScreenSize = () => {
     return () => window.removeEventListener('resize', handleChangeSize);
   }, [])
 
-  return { currentWidth }
+  const sizes = {
+    large: 1024,
+    medium: 768,
+    small: 425
+  }
+
+  const isMobile = currentWidth <= sizes.small // boolean
+
+  return {
+    currentWidth,
+    isMobile
+  }
 };
