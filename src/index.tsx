@@ -4,16 +4,19 @@ export const useScreenSize = () => {
   const [currentWidth, setCurrentWidth] = useState(window.screen.width)
 
   const handleChangeSize = () => {
-    const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
-    
+    const width =
+      window.innerWidth ||
+      document.documentElement.clientWidth ||
+      document.body.clientWidth
+
     setCurrentWidth(width)
-  }
+  };
 
   useEffect(() => {
-    handleChangeSize();
+    handleChangeSize()
 
-    window.addEventListener('resize', handleChangeSize)
-    return () => window.removeEventListener('resize', handleChangeSize)
+    window.addEventListener('resize', handleChangeSize);
+    return () => window.removeEventListener('resize', handleChangeSize);
   }, [])
 
   return { currentWidth }
