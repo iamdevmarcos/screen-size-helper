@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react'
 
 export const useScreenSize = () => {
   const [currentWidth, setCurrentWidth] = useState(window.screen.width)
@@ -10,27 +10,27 @@ export const useScreenSize = () => {
       document.body.clientWidth
 
     setCurrentWidth(width)
-  };
+  }
 
   useEffect(() => {
-    handleChangeSize();
+    handleChangeSize()
 
-    window.addEventListener('resize', handleChangeSize);
-    return () => window.removeEventListener('resize', handleChangeSize);
+    window.addEventListener('resize', handleChangeSize)
+    return () => window.removeEventListener('resize', handleChangeSize)
   }, [])
 
   const sizes = {
     large: 1024,
     medium: 768,
-    small: 425,
+    small: 425
   }
 
-  const isTablet = currentWidth <= sizes.medium && currentWidth >= sizes.small; // boolean
+  const isTablet = currentWidth <= sizes.medium && currentWidth >= sizes.small // boolean
   const isMobile = currentWidth <= sizes.small // boolean
 
   return {
     currentWidth,
     isTablet,
     isMobile
-  };
-};
+  }
+}
