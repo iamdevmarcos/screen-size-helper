@@ -13,7 +13,7 @@ export const useScreenSize = () => {
   };
 
   useEffect(() => {
-    handleChangeSize()
+    handleChangeSize();
 
     window.addEventListener('resize', handleChangeSize);
     return () => window.removeEventListener('resize', handleChangeSize);
@@ -22,13 +22,15 @@ export const useScreenSize = () => {
   const sizes = {
     large: 1024,
     medium: 768,
-    small: 425
+    small: 425,
   }
 
+  const isTablet = currentWidth <= sizes.medium && currentWidth >= sizes.small; // boolean
   const isMobile = currentWidth <= sizes.small // boolean
 
   return {
     currentWidth,
+    isTablet,
     isMobile
-  }
+  };
 };
