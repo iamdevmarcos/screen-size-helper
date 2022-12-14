@@ -10,7 +10,7 @@ export interface UseScreenSizeProps {
   breakpoints?: Sizes
 }
 
-const defaultSizes = {
+const defaultSizes: Sizes = {
   large: 1024,
   medium: 768,
   small: 425
