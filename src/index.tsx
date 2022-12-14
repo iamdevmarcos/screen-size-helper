@@ -25,7 +25,7 @@ export const useScreenSize = () => {
     small: 425
   }
 
-  const isTablet = currentWidth <= sizes.medium && currentWidth >= sizes.small // boolean
+  const isTablet = currentWidth <= sizes.medium && currentWidth > sizes.small // boolean
   const isMobile = currentWidth <= sizes.small // boolean
 
   return {
