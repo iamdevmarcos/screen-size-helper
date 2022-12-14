@@ -4,7 +4,7 @@ import * as ReactDOM from 'react-dom'
 import { useScreenSize } from '../src'
 
 const App = () => {
-  const { currentWidth, isTablet, isMobile } = useScreenSize()
+  const { currentWidth, isTablet, isMobile } = useScreenSize({})
 
   return (
     <div>
