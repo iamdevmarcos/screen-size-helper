@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 
 type Sizes = {
-  large: number
   medium: number
   small: number
+  large: number
   xlarge: number
 }
 
@@ -12,9 +12,9 @@ export interface UseScreenSizeProps {
 }
 
 const defaultSizes: Sizes = {
-  large: 1024,
   medium: 768,
   small: 425,
+  large: 1024,
   xlarge: 1440
 }
 
@@ -39,20 +39,22 @@ export const useScreenSize = ({
     return () => window.removeEventListener('resize', handleChangeSize)
   }, [])
 
+  const isLargeDesktop =
+    currentWidth <= breakpoints.xlarge && currentWidth > breakpoints.large
+  
+  const isDesktop =
+    currentWidth <= breakpoints.large && currentWidth > breakpoints.medium
+
   const isTablet =
     currentWidth <= breakpoints.medium && currentWidth > breakpoints.small
 
   const isMobile = currentWidth <= breakpoints.small
 
-  const isDesktop = currentWidth > breakpoints.large
-
-  const isLargeDesktop = currentWidth > breakpoints.xlarge
-
   return {
     currentWidth,
+    isLargeDesktop,
+    isDesktop,
     isTablet,
     isMobile,
-    isDesktop,
-    isLargeDesktop
   }
 }
