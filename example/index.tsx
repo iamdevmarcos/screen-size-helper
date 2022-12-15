@@ -12,6 +12,14 @@ const App = () => {
 
       {isTablet && <p>Only show on Tablet</p>}
       {isMobile && <p>Only show on Mobile</p>}
+      {!isMobile && <p>Only show on Desktop</p>}
+      {!isTablet && <p>Only show on Desktop</p>}
+      {!isMobile && !isTablet && <p>Only show on Desktop</p>}
+      {isMobile || isTablet ? (
+        <p>Only show on Mobile or Tablet</p>
+      ) : (
+        <p>Only show on Desktop</p>
+      )}
     </div>
   )
 }
