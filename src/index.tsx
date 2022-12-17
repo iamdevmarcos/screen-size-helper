@@ -41,7 +41,7 @@ export const useScreenSize = ({
 
   const isLargeDesktop =
     currentWidth <= breakpoints.xlarge && currentWidth > breakpoints.large
-  
+
   const isDesktop =
     currentWidth <= breakpoints.large && currentWidth > breakpoints.medium
 
@@ -55,6 +55,6 @@ export const useScreenSize = ({
     isLargeDesktop,
     isDesktop,
     isTablet,
-    isMobile,
+    isMobile
   }
 }
