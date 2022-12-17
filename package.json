@@ -27,7 +27,7 @@
       "pre-commit": "tsdx lint"
     }
   },
-  "name": "react-screen-size",
+  "name": "react-screen-size-helper",
   "author": "Marcos Mendes",
   "module": "dist/react-screen-size.esm.js",
   "size-limit": [
