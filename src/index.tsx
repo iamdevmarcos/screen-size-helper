@@ -18,10 +18,14 @@ const defaultSizes: Sizes = {
   xlarge: 1440
 }
 
+const isClientSide = typeof window === 'object'
+
 export const useScreenSize = ({
   breakpoints = defaultSizes
 }: UseScreenSizeProps) => {
-  const [currentWidth, setCurrentWidth] = useState(window.screen.width)
+  const [currentWidth, setCurrentWidth] = useState(
+    isClientSide ? window.screen.width : 0
+  )
 
   const handleChangeSize = () => {
     const width =
@@ -33,6 +37,8 @@ export const useScreenSize = ({
   }
 
   useEffect(() => {
+    if (!isClientSide) return
+
     handleChangeSize()
 
     window.addEventListener('resize', handleChangeSize)
