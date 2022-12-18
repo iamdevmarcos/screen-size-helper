@@ -1,7 +1,7 @@
 <div align="center">
 <h1>React Screen Size Helper</h1>
 
-<a href="https://www.emojione.com/emoji/1f410">
+<a>
   <img
     height="80"
     width="80"
@@ -24,7 +24,7 @@
 
 ## Installation
 
-This module is distributed via [npm](https://www.npmjs.com/package/react-screen-size-helper) which is bundled with [node]() and
+This module is distributed via [npm](https://www.npmjs.com/package/react-screen-size-helper) which is bundled with node and
 should be installed as one of your project's `dependencies`:
 
 ```
@@ -45,20 +45,26 @@ yarn add react-screen-size-helper
 import React from 'react'
 import { useScreenSize } from 'react-screen-size-helper'
 
-const {
-  currentWidth,
-  isLargeDesktop,
-  isDesktop,
-  isTablet,
-  isMobile
-} = useScreenSize({})
+const App = () => {
+  const {
+    currentWidth,
+    isLargeDesktop,
+    isDesktop,
+    isTablet,
+    isMobile
+  } = useScreenSize({})
 
-<h1>Current Width is: {currentWidth}</h1>
+  return (
+    <h1>Current Width is: {currentWidth}</h1>
 
-{isLargeDesktop && <p>Only show on Large Desktop</p>}
-{isDesktop && <p>Only show on Desktop</p>}
-{isTablet && <p>Only show on Tablet</p>}
-{isMobile && <p>Only show on Mobile</p>}
+    {isLargeDesktop && <p>Only show on Large Desktop</p>}
+    {isDesktop && <p>Only show on Desktop</p>}
+    {isTablet && <p>Only show on Tablet</p>}
+    {isMobile && <p>Only show on Mobile</p>}
+  )
+}
+
+export default App
 ```
 
 
