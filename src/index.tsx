@@ -27,21 +27,21 @@ export const useScreenSize = ({
     isClientSide ? window.screen.width : 0
   )
 
-  const handleChangeSize = () => {
-    const width =
-      window.innerWidth ||
-      document.documentElement.clientWidth ||
-      document.body.clientWidth
-
-    setCurrentWidth(width)
-  }
-
   useEffect(() => {
     if (!isClientSide) return
 
-    handleChangeSize()
+    const handleChangeSize = () => {
+      const width =
+        window.innerWidth ||
+        document.documentElement.clientWidth ||
+        document.body.clientWidth
+
+      setCurrentWidth(width)
+    }
 
     window.addEventListener('resize', handleChangeSize)
+    handleChangeSize()
+
     return () => window.removeEventListener('resize', handleChangeSize)
   }, [])
 
