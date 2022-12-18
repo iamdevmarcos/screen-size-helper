@@ -1,6 +1,6 @@
 # React Screen Size Helper
 
-React-size-hook is a React hook designed to calculate the screen size. It's helpful to identify what kind o device the page is being rendered and conditionally render something based on that info.
+Description in progress
 
 ## Installation
 
@@ -8,10 +8,10 @@ React Screen Size Helper is available as an [npm package](https://www.npmjs.com/
 
 ```bash
 # using npm
-npm install react-size-screen-helper
+npm install react-screen-size-helper
 
 # using yarn
-yarn add react-size-screen-helper
+yarn add react-screen-size-helper
 ```
 
 ## Usage
