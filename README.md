@@ -16,7 +16,7 @@
   />
 </a><br /><br />
 
-<p>Simple React Hook utility for identifying and working with screen sizes.</p><br />
+<p>Simple React Hook utility for identifying and working with screen sizes.</p>
 </div>
 
 <hr />
