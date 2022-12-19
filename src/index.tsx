@@ -45,8 +45,7 @@ export const useScreenSize = ({
     return () => window.removeEventListener('resize', handleChangeSize)
   }, [])
 
-  const isLargeDesktop =
-    currentWidth <= breakpoints.xlarge && currentWidth > breakpoints.large
+  const isLargeDesktop = currentWidth > breakpoints.large
 
   const isDesktop =
     currentWidth <= breakpoints.large && currentWidth > breakpoints.medium
