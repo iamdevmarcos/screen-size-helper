@@ -39,7 +39,7 @@ for installation via [yarn](https://yarnpkg.com/)
 yarn add react-screen-size-helper
 ```
 
-## Examples
+## Example
 
 ```jsx
 import React from 'react'
@@ -55,12 +55,14 @@ const App = () => {
   } = useScreenSize({})
 
   return (
-    <h1>Current Width is: {currentWidth}</h1>
+    <div>
+      <h1>Current Width is: {currentWidth}</h1>
 
-    {isLargeDesktop && <p>Only show on Large Desktop</p>}
-    {isDesktop && <p>Only show on Desktop</p>}
-    {isTablet && <p>Only show on Tablet</p>}
-    {isMobile && <p>Only show on Mobile</p>}
+      {isLargeDesktop && <p>Only show on Large Desktop</p>}
+      {isDesktop && <p>Only show on Desktop</p>}
+      {isTablet && <p>Only show on Tablet</p>}
+      {isMobile && <p>Only show on Mobile</p>}
+    </div>
   )
 }
 
