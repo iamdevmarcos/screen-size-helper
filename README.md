@@ -27,7 +27,6 @@ Simple React Hook utility for identifying and working with screen sizes.
 </div>
 
 ## Links
-<hr />
 
 
 - [Github](https://github.com/iamdevmarcos/React-Screen-Size-Helper)
@@ -35,7 +34,6 @@ Simple React Hook utility for identifying and working with screen sizes.
 
 
 ## Installation
-<hr />
 
 This module is distributed via [npm](https://www.npmjs.com/package/react-screen-size-helper) which is bundled with node and
 should be installed as one of your project's `dependencies`.
@@ -92,6 +90,51 @@ const App = () => {
 }
 
 export default App
+```
+
+## Example with Custom Breakpoints
+
+```
+import React from 'react'
+import { useScreenSize } from 'react-screen-size-helper'
+
+const App = () => {
+  const breakpoints = {
+    small: 500,
+    medium: 800,
+    large: 1600
+  }
+
+  const {
+    currentWidth,
+    isLargeDesktop,
+    isDesktop,
+    isTablet,
+    isMobile
+  } = useScreenSize({ breakpoints })
+
+  return (
+    <div>
+      <h1>Current Width is: {currentWidth}</h1>
+
+      {isLargeDesktop && <p>Only show on Large Desktop</p>}
+      {isDesktop && <p>Only show on Desktop</p>}
+      {isTablet && <p>Only show on Tablet</p>}
+      {isMobile && <p>Only show on Mobile</p>}
+    </div>
+  )
+}
+
+export default App
+```
+
+Note: The default breakpoints below:
+```
+const defaultBreakpoints = {
+  small: 425,
+  medium: 768,
+  large: 1024
+}
 ```
 
 
