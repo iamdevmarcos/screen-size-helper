@@ -4,7 +4,6 @@ type Sizes = {
   medium: number
   small: number
   large: number
-  xlarge: number
 }
 
 export interface UseScreenSizeProps {
@@ -14,8 +13,7 @@ export interface UseScreenSizeProps {
 const defaultSizes: Sizes = {
   medium: 768,
   small: 425,
-  large: 1024,
-  xlarge: 1440
+  large: 1024
 }
 
 const isClientSide = typeof window === 'object'
@@ -48,10 +46,10 @@ export const useScreenSize = ({
   const isLargeDesktop = currentWidth > breakpoints.large
 
   const isDesktop =
-    currentWidth <= breakpoints.large && currentWidth > breakpoints.medium
+    currentWidth > breakpoints.medium && currentWidth <= breakpoints.large
 
   const isTablet =
-    currentWidth <= breakpoints.medium && currentWidth > breakpoints.small
+    currentWidth > breakpoints.small && currentWidth <= breakpoints.medium
 
   const isMobile = currentWidth <= breakpoints.small
 
