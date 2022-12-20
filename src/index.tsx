@@ -21,9 +21,7 @@ const isClientSide = typeof window === 'object'
 export const useScreenSize = ({
   breakpoints = defaultSizes
 }: UseScreenSizeProps) => {
-  const [currentWidth, setCurrentWidth] = useState(
-    isClientSide ? window.screen.width : 0
-  )
+  const [currentWidth, setCurrentWidth] = useState(0)
 
   useEffect(() => {
     if (!isClientSide) return
