@@ -94,7 +94,7 @@ export default App
 
 ## Example with Custom Breakpoints
 
-```
+```jsx
 import React from 'react'
 import { useScreenSize } from 'react-screen-size-helper'
 
@@ -129,7 +129,7 @@ export default App
 ```
 
 Note: The default breakpoints below:
-```
+```jsx
 const defaultBreakpoints = {
   small: 425,
   medium: 768,
