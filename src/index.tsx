@@ -22,6 +22,7 @@ export const useScreenSize = ({
   breakpoints = defaultSizes
 }: UseScreenSizeProps) => {
   const [currentWidth, setCurrentWidth] = useState(0)
+  const [currentHeight, setCurrentHeight] = useState(0)
 
   useEffect(() => {
     if (!isClientSide) return
@@ -32,7 +33,13 @@ export const useScreenSize = ({
         document.documentElement.clientWidth ||
         document.body.clientWidth
 
+      const height =
+        window.innerHeight ||
+        document.documentElement.clientHeight ||
+        document.body.clientHeight
+
       setCurrentWidth(width)
+      setCurrentHeight(height)
     }
 
     window.addEventListener('resize', handleChangeSize)
@@ -53,6 +60,7 @@ export const useScreenSize = ({
 
   return {
     currentWidth,
+    currentHeight,
     isLargeDesktop,
     isDesktop,
     isTablet,

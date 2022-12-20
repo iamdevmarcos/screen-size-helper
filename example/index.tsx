@@ -4,12 +4,19 @@ import * as ReactDOM from 'react-dom'
 import { useScreenSize } from '../src'
 
 const App = () => {
-  const { currentWidth, isLargeDesktop, isDesktop, isTablet, isMobile } =
-    useScreenSize({})
+  const {
+    currentWidth,
+    currentHeight,
+    isLargeDesktop,
+    isDesktop,
+    isTablet,
+    isMobile
+  } = useScreenSize({})
 
   return (
     <div>
       <h1>Current Width is: {currentWidth}</h1>
+      <h1>Current Height is: {currentHeight}</h1>
 
       {isLargeDesktop && <p>Only show on Large Desktop</p>}
       {isDesktop && <p>Only show on Desktop</p>}
