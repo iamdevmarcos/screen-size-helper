@@ -71,6 +71,7 @@ import { useScreenSize } from 'react-screen-size-helper'
 const App = () => {
   const {
     currentWidth,
+    currentHeight,
     isLargeDesktop,
     isDesktop,
     isTablet,
@@ -80,6 +81,7 @@ const App = () => {
   return (
     <div>
       <h1>Current Width is: {currentWidth}</h1>
+      <h1>Current Height is: {currentHeight}</h1>
 
       {isLargeDesktop && <p>Only show on Large Desktop</p>}
       {isDesktop && <p>Only show on Desktop</p>}
@@ -107,6 +109,7 @@ const App = () => {
 
   const {
     currentWidth,
+    currentHeight,
     isLargeDesktop,
     isDesktop,
     isTablet,
@@ -116,6 +119,7 @@ const App = () => {
   return (
     <div>
       <h1>Current Width is: {currentWidth}</h1>
+      <h1>Current Height is: {currentHeight}</h1>
 
       {isLargeDesktop && <p>Only show on Large Desktop</p>}
       {isDesktop && <p>Only show on Desktop</p>}
