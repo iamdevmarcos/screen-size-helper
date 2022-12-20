@@ -1,5 +1,8 @@
-<div align="center">
-<h1>React Screen Size Helper</h1>
+# React Screen Size Helper
+
+Simple React Hook utility for identifying and working with screen sizes.
+
+<br /><div align="center">
 
 <a>
   <img
@@ -21,28 +24,44 @@
     src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/desktop-computer_1f5a5-fe0f.png"
   />
 </a><br /><br />
-
-<p>Simple React Hook utility for identifying and working with screen sizes.</p>
 </div>
 
+## Links
 <hr />
 
 
+- [Github](https://github.com/iamdevmarcos/React-Screen-Size-Helper)
+- [NPM](https://www.npmjs.com/package/react-screen-size-helper)
+
+
 ## Installation
+<hr />
 
 This module is distributed via [npm](https://www.npmjs.com/package/react-screen-size-helper) which is bundled with node and
-should be installed as one of your project's `dependencies`:
+should be installed as one of your project's `dependencies`.
 
+## Installing
+
+### Package Manager
+
+Using npm:
 ```
 npm install react-screen-size-helper
 ```
 
-or
-
-for installation via [yarn](https://yarnpkg.com/)
-
+Using yarn:
 ```
 yarn add react-screen-size-helper
+```
+
+Using bower:
+```
+bower install react-screen-size-helper
+```
+
+Using pnpm:
+```
+pnpm add react-screen-size-helper
 ```
 
 ## Example
