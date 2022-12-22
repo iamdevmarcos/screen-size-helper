@@ -1,5 +1,5 @@
 {
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -29,6 +29,25 @@
   },
   "name": "react-screen-size-helper",
   "author": "Marcos Mendes",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/iamdevmarcos/React-Screen-Size-Helper"
+  },
+  "bugs": {
+    "url": "https://github.com/iamdevmarcos/React-Screen-Size-Helper/issues"
+  },
+  "keywords": [
+    "react",
+    "viewport",
+    "scroll",
+    "dimensions",
+    "size",
+    "resize",
+    "event",
+    "observer",
+    "window",
+    "screen"
+  ],
   "module": "dist/react-screen-size.esm.js",
   "size-limit": [
     {
