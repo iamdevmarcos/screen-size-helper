@@ -2,30 +2,6 @@
 
 Simple React Hook utility for identifying and working with screen sizes.
 
-<br /><div align="center">
-
-<a>
-  <img
-    height="80"
-    width="80"
-    alt="notebook"
-    src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/laptop_1f4bb.png"
-  />
-  <img
-    height="80"
-    width="80"
-    alt="smartphone"
-    src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/mobile-phone_1f4f1.png"
-  />
-  <img
-    height="80"
-    width="80"
-    alt="notebook"
-    src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/desktop-computer_1f5a5-fe0f.png"
-  />
-</a><br /><br />
-</div>
-
 ## Links
 
 
